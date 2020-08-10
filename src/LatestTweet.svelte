@@ -1,23 +1,24 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount } from 'svelte';
 
-  let data
+  let data;
+
   onMount(async () => {
     const res = await fetch(
       'https://bantros-api.herokuapp.com/fetch-latest-tweet'
-    )
+    );
     // const res = await fetch('http://localhost:8000/fetch-latest-tweet')
-    const json = await res.json()
+    const json = await res.json();
 
     if (res.ok) {
       data = {
         id: json[0].id_str,
-        text: json[0].text,
-      }
+        text: json[0].text
+      };
     } else {
-      throw new Error(json)
+      throw new Error(json);
     }
-  })
+  });
 </script>
 
 <div class="flex flex-column justify-center pv6 pv7-ns">
