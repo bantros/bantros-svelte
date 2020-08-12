@@ -1,7 +1,13 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
 
-  let data;
+  interface Data {
+    track: string;
+    artist: string;
+    album: string;
+    playing: string;
+  }
+  let data: Data;
 
   onMount(async () => {
     const res = await fetch(
@@ -26,8 +32,6 @@
           playing: json.is_playing
         };
       }
-    } else {
-      throw new Error(json);
     }
   });
 </script>

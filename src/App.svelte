@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Projects from './Projects.svelte';
   import LatestTweet from './LatestTweet.svelte';
   import NowPlaying from './NowPlaying.svelte';

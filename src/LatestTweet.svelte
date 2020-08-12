@@ -1,7 +1,12 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
 
-  let data;
+  interface Data {
+    id: string;
+    text: string;
+  }
+
+  let data: Data;
 
   onMount(async () => {
     const res = await fetch(
@@ -15,8 +20,6 @@
         id: json[0].id_str,
         text: json[0].text
       };
-    } else {
-      throw new Error(json);
     }
   });
 </script>

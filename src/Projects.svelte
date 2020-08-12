@@ -1,5 +1,12 @@
-<script>
-  const projects = [
+<script lang="ts">
+  interface Projects {
+    id: string;
+    title: string;
+    url: string;
+    color: string;
+  }
+
+  const projects: Projects[] = [
     {
       id: 'zoflora',
       title: 'Zoflora',
@@ -68,15 +75,15 @@
     }
   ];
 
-  function getColor(index) {
-    const percentage = 100 / projects.length;
+  function getColor(index: number) {
+    const percentage: number = 100 / projects.length;
     return `color: rgba(255, 255, 255, ${(percentage / 100) *
       (projects.length - index)})`;
   }
 </script>
 
 <div class="pv4">
-  {#each projects as { id, title, url, color }, index}
+  {#each projects as { title, url, color }, index}
     <div class="project-item mb3 mb2-l">
       <a
         class="project-link link f2 f1-ns f-subheadline-l fw5 lh-solid white {color}"
