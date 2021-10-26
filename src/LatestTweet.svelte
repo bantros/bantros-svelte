@@ -33,7 +33,8 @@
         class="link white"
         href="https://twitter.com/bantros/status/{data.id}"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         {data.text}
       </a>
     </p>

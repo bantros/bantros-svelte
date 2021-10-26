@@ -53,8 +53,9 @@
 
   function getColor(index: number) {
     const percentage: number = 100 / projects.length;
-    return `color: rgba(255, 255, 255, ${(percentage / 100) *
-      (projects.length - index)})`;
+    return `color: rgba(255, 255, 255, ${
+      (percentage / 100) * (projects.length - index)
+    })`;
   }
 </script>
 
@@ -66,7 +67,8 @@
         href="{url}"
         target="_blank"
         rel="noopener"
-        style="{getColor(index)}">
+        style="{getColor(index)}"
+      >
         {title}
       </a>
     </div>
