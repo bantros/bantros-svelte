@@ -1,18 +1,13 @@
-<script lang="ts">
+<script>
   import { onMount } from 'svelte';
 
-  interface Data {
-    id: string;
-    text: string;
-  }
-
-  let data: Data;
+  let data;
 
   onMount(async () => {
     const res = await fetch(
       'https://bantros-api.herokuapp.com/fetch-latest-tweet'
     );
-    // const res = await fetch('http://localhost:8000/fetch-latest-tweet')
+    // const res = await fetch('http://localhost:8000/fetch-latest-tweet');
     const json = await res.json();
 
     if (res.ok) {

@@ -1,12 +1,5 @@
-<script lang="ts">
-  interface Projects {
-    id: string;
-    title: string;
-    url: string;
-    color: string;
-  }
-
-  const projects: Projects[] = [
+<script>
+  const projects = [
     {
       id: 'faded',
       title: 'Faded',
@@ -51,8 +44,8 @@
     }
   ];
 
-  function getColor(index: number) {
-    const percentage: number = 100 / projects.length;
+  function getColor(index) {
+    const percentage = 100 / projects.length;
     return `color: rgba(255, 255, 255, ${
       (percentage / 100) * (projects.length - index)
     })`;

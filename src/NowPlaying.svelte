@@ -1,13 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  interface Data {
-    track: string;
-    artist: string;
-    album: string;
-    playing: string;
-  }
-  let data: Data;
+  let data;
 
   onMount(async () => {
     const res = await fetch(
@@ -41,7 +35,13 @@
     <div class="cover">
       <figure class="cover__image">
         {#if data.album}
-          <img src="{data.album}" alt="" />
+          <img
+            src="{data.album}"
+            width="640"
+            height="640"
+            alt="{data.track}"
+            loading="lazy"
+          />
         {/if}
       </figure>
     </div>
