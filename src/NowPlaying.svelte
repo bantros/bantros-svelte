@@ -14,7 +14,7 @@ const promise = fetch(
       <p class="text-2xl  md:text-4xl  lg:text-5xl  mb-0"> Loading! </p>
     {:then data}
       <h2 class="mb-2  text-base  text-white/60  md:text-xl">
-        {data.playing ? 'Now Playing' : 'Recently Played'}
+        {data.is_playing ? 'Now Playing' : 'Recently Played'}
       </h2>
       {#if data.hasOwnProperty('progress_ms')}
         <p class="text-2xl  md:text-4xl  lg:text-5xl  mb-2">
