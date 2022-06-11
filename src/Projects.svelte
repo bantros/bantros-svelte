@@ -49,13 +49,6 @@ const projects = [
     color: 'text-white/30'
   }
 ];
-
-// function getColor(index) {
-//   const percentage = 100 / projects.length;
-//   return `color: rgba(255, 255, 255, ${
-//     (percentage / 100) * (projects.length - index)
-//   })`;
-// }
 </script>
 
 <div class="max-w-5xl  p-8  md:p-16">

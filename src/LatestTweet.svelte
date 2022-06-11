@@ -2,22 +2,6 @@
 const promise = fetch(
   'https://bantros-api.herokuapp.com/fetch-latest-tweet'
 ).then((res) => res.json());
-
-// onMount(async () => {
-//   try {
-//     const res = await fetch(
-//       'https://bantros-api.herokuapp.com/fetch-latest-tweet'
-//     );
-//     // const res = await fetch('http://localhost:8000/fetch-latest-tweet');
-//     const json = await res.json();
-//     data = {
-//       id: json[0].id_str,
-//       text: json[0].text
-//     };
-//   } catch (error) {
-//     console.error(error);
-//   }
-// });
 </script>
 
 <div class="p-8  md:p-16">

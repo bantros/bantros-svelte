@@ -1,10 +1,7 @@
 <script>
-const promise = fetch('https://bantros-api.herokuapp.com/fetch-latest-track')
-  .then((res) => res.json())
-  .then((json) => {
-    console.log(json);
-    return json;
-  });
+const promise = fetch(
+  'https://bantros-api.herokuapp.com/fetch-latest-track'
+).then((res) => res.json());
 </script>
 
 <div class="p-8  md:p-16">
