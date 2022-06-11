@@ -4,5 +4,10 @@
   "singleQuote": true,
   "trailingComma": "none",
   "htmlWhitespaceSensitivity": "strict",
-  "svelteStrictMode": true
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "svelteSortOrder" : "options-scripts-markup-styles",
+  "svelteStrictMode": true,
+  "svelteBracketNewLine": false,
+  "svelteAllowShorthand": false,
+  "svelteIndentScriptAndStyle": false
 }
